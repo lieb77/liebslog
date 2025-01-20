@@ -8,8 +8,22 @@ liebslog.bsky_post:
   options:
     _admin_route: TRUE
 
+liebslog.tab:
+  path: '/blog/{node}'
+  defaults:
+    _title: 'Share to Bluesky'
+    _form: 'Drupal\liebslog\Form\BskyPostForm'
+  requirements:
+    _permission: 'create blog content'
+  options:
+    _admin_route: TRUE
+    parameters:
+      example:
+        type: entity:node
+        bundle:
+          - blog
+          
 liebslog.blog:
   path: '/blog'
   requirements:
      _permission: 'view content'
-    

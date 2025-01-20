@@ -33,6 +33,13 @@ final class BskyPostForm extends FormBase {
 		$this->bsky_service = $bsky_service;
 		$this->post_service = $post_service;
 		
+		$node = \Drupal::routeMatch()->getParameter('node');
+		if (!empty($node) ) {
+     		$this->post = $this->post_service->getPost($node);
+     		$this->step = 2;     	
+		}
+		
+		
 	}
 	
 	/**
@@ -57,6 +64,7 @@ final class BskyPostForm extends FormBase {
      * {@inheritdoc}
      */
     public function buildForm(array $form, FormStateInterface $form_state): array {
+         	
 		if ($this->step == 2){
 		
 			$form['title'] = [
@@ -67,7 +75,7 @@ final class BskyPostForm extends FormBase {
 			
 			$form['text'] =[
 				'#type'	  => 'textarea',
-				'#ttitle' => $this->t("Post body"),
+				'#title' => $this->t("Post summary"),
 				'#default_value' => $this->t($this->post['text']),
 			];
 			
