@@ -1,0 +1,15 @@
+liebslog.bsky_post:
+  path: '/blog/bsky/post'
+  defaults:
+    _title: 'Bluesky Post'
+    _form: 'Drupal\liebslog\Form\BskyPostForm'
+  requirements:
+    _permission: 'create blog content'
+  options:
+    _admin_route: TRUE
+
+liebslog.blog:
+  path: '/blog'
+  requirements:
+     _permission: 'view content'
+    

@@ -1,0 +1,7 @@
+name: 'Lieb&#039;s Log'
+type: module
+description: 'Help manage my blog posts'
+package: Custom
+core_version_requirement: ^10 || ^11
+dependencies:
+  - bsky:bsky
