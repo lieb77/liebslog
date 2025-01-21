@@ -20,7 +20,6 @@ class GetPosts
     {
     
         $this->entityTypeManager = $entityTypeManager;
-
     
         $storage = $entityTypeManager->getStorage('node');
         $ids = $storage->getQuery()

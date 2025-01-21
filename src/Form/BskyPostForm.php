@@ -37,7 +37,7 @@ final class BskyPostForm extends FormBase
         
         $node = \Drupal::routeMatch()->getParameter('node');
         if (!empty($node) ) {
-             $this->post = $this->post_service->getPost($node);
+             $this->post = $this->post_service->getPost($node->Id());
              $this->step = 2;         
         }
         
