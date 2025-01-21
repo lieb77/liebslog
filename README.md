@@ -1,30 +1,16 @@
-## INTRODUCTION
+Lieb's Log
 
-The Lieb&#039;s Log module is a DESCRIBE_THE_MODULE_HERE.
+Author: Paul Lieberman
+Created: 2025-01-18
 
-The primary use case for this module is:
+This module adds a UI to the 
+bsky module, which provides Drupal services, for the 
+potibm/phluesky library which provides a PHP library for Bluesky social using the AT Protocol.
 
-- Use case #1
-- Use case #2
-- Use case #3
+The module adds a "Post to Bluesky" tab to the local actions menu for blog nodes
+The tab presents a form with the Title, Summary, and Link for the node,
+which can be edited before posting to Bluesky.
 
-## REQUIREMENTS
-
-DESCRIBE_MODULE_DEPENDENCIES_HERE
-
-## INSTALLATION
-
-Install as you would normally install a contributed Drupal module.
-See: https://www.drupal.org/node/895232 for further information.
-
-## CONFIGURATION
-- Configuration step #1
-- Configuration step #2
-- Configuration step #3
-
-## MAINTAINERS
-
-Current maintainers for Drupal 10:
-
-- FIRST_NAME LAST_NAME (NICKNAME) - https://www.drupal.org/u/NICKNAME
+Dependencies:
+	drupal/bsky
 

@@ -58,25 +58,16 @@ class GetPosts
         
         // Get the title
         $title = $node->getTitle();
-        
-        // Get the post summary
-        // $view_builder = $this->entityTypeManager->getViewBuilder('node');
-        // $teaser = $view_builder->view($node, 'teaser');
-        //$teaser = $node->body->view('teaser');
-        $teaser = $node->get('body')->summary;
-        // Get the link
-        $link  = Link::fromTextAndUrl(
-            "Read on Lieb's Log",
-            $node->toUrl()->setAbsolute()                
-        )->toString();
-
+        // Get the body summary
+        $text  = $node->get('body')->summary;
+        // Get the link        
         $link = $node->toUrl()->setAbsolute()->toString();
         
         return [
-        'title' => $title,
-        'text'    => $teaser,
-        'link'  => $link,
-        ];
+			'title' => $title,
+			'text'  => $text,
+			'link'  => $link,
+			];
 
     }
     

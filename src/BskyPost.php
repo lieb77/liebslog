@@ -30,10 +30,8 @@ class BskyPost
     public function post($message, $link)
     {
         $post = $this->bsky_connector->createPost($message);
-        //        $this->bsky_connector->addFacets($post);
         $post = $this->bsky_connector->addCard($post, $link, "Lieb's Log", "Read the full post.");
-                
-        
+                        
         try {
             $this->bsky_connector->sendPost($post);
         } 
