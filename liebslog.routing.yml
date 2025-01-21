@@ -18,7 +18,7 @@ liebslog.tab:
   options:
     _admin_route: TRUE
     parameters:
-      example:
+      node:
         type: entity:node
         bundle:
           - blog
