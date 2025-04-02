@@ -1,8 +1,4 @@
 services:
-  liebslog.bsky_post:
-    class: Drupal\liebslog\BskyPost
-    arguments: ['@bsky.post_service']
-    
   liebslog.get_posts:
     class: Drupal\liebslog\GetPosts
     arguments: ['@entity_type.manager']

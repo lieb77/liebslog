@@ -1,5 +1,0 @@
-liebslog.share_tab:
-  title: 'Share to Bluesky' 
-  route_name: liebslog.tab
-  base_route: entity.node.canonical
-  weight: 10
