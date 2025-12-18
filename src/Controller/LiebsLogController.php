@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Drupal\liebs_log\Controller;
+namespace Drupal\liebslog\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Logger\LoggerChannelInterface;
@@ -37,6 +37,14 @@ final class LiebsLogController extends ControllerBase {
       );
   }
 
+
+    public function blog(): array {
+
+        return[
+            '#type' => 'markup',
+            '#markup' => $this->t('Not yet implemented')
+        ];
+    }
 
   /**
    * Display rides as a table

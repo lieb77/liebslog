@@ -1,8 +1,3 @@
-{{{<?php
-
-declare(strict_types=1);
-
-namespace Drupal\liebslog;
 <?php
 
 declare(strict_types=1);
@@ -13,7 +8,7 @@ use Drupal\Core\Logger\LoggerChannelInterface;
 use GuzzleHttp\ClientInterface;
 
 /**
-* @todo Add a description for the middleware.
+* 
 */
 class GetPosts {
 
@@ -45,9 +40,5 @@ class GetPosts {
         return false;
     }
 
-}
-
-
 }//End of clss
 
-}}}
