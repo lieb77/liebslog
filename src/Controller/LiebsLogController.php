@@ -33,7 +33,7 @@ final class LiebsLogController extends ControllerBase {
     return new self(
           $container->get('logger.channel.liebslog'),
           $container->get('liebslog.getrides'),
-          $container->get('liebslog.getblog').
+          $container->get('liebslog.getblog')
       );
   }
 
