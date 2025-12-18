@@ -2,10 +2,10 @@
     "name": "drupal/liebslog",
     "description": "Lieb's log",
     "type": "drupal-custom-module",
-    "license": "GPL-2.0+",
+    "license": "GPL-2.0-or-later",
     "autoload": {
         "psr-4": {
-            "Drupal\liebslog\\": "src/"
+            "Drupal\\liebslog\\": "src/"
         }
     },
     "authors": [

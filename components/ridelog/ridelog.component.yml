@@ -1,0 +1,29 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Ridelog
+status: stable
+description: DIsplay my ride log
+props:
+  type: object
+  properties:
+    uid:
+      type: number
+      title: UID
+    feed:
+      type: array
+      label: "Ride"
+      items:
+        title:
+          type: string
+          title: Title
+        date:
+          type: string
+          title: Date
+        miles:
+          type: string
+          title: Miles
+        bike:
+          type: string
+          title: Bike
+        body:
+          type: string
+          title: Body

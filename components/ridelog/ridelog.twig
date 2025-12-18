@@ -1,0 +1,19 @@
+<!-- Ridelog -->
+
+<h2>Paul's Ridelog</h2>
+
+<table class="ridelog">
+  <thead>
+    <tr>
+      <th>Route</th><th>Bike</th><th>Date</th><th>Miles</th>
+    <tr>
+  </thead>
+
+  {% for ride in rides %}
+      <tr>
+        {% for field in ride %}
+                <td> {{ field }} </td>
+         {% endfor %}
+      </tr>
+   {% endfor %}
+ </table>

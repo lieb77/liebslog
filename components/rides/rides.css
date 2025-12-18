@@ -1,0 +1,8 @@
+[data-component-id="liebs_log:ride"] {
+
+    .ride {
+        border: 1px solid #444;
+        padding: 1em;
+        margin-bottom: 1em;
+    }
+}

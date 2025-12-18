@@ -1,0 +1,17 @@
+<!-- Ridelog -->
+
+<h2>Paul's Ridelog</h2>
+
+
+{% for ride in rides %}
+
+	<div class="ride">
+		<h2>{{ ride.title }}</h2>
+		<p>
+			Date: {{ ride.date }}<br />
+			Bike: {{ ride.bike }}<br />
+			Miles: {{ ride.miles }}
+		</p>
+		<p> {{ ride.body }} </p>
+	</div>
+{% endfor %}   

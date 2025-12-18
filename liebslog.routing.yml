@@ -2,3 +2,17 @@ liebslog.blog:
   path: '/blog'
   requirements:
      _permission: 'view content'
+liebs_log.ridelog:
+  path: '/log/ridelog'
+  defaults:
+    _controller: '\Drupal\liebs_log\Controller\LiebsLogController:ridelog'
+  requirements:
+    _permission: 'access content'
+
+
+liebs_log.rides:
+  path: '/log/rides'
+  defaults:
+    _controller: '\Drupal\liebs_log\Controller\LiebsLogController:rides'
+  requirements:
+    _permission: 'access content'

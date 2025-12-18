@@ -2,3 +2,7 @@ services:
   liebslog.get_posts:
     class: Drupal\liebslog\GetPosts
     arguments: ['@entity_type.manager']
+services:
+  liebs_log.middleware:
+    class: Drupal\liebs_log\LiebsLogReader
+    arguments: ['@http_client', '@logger.channel.default']
