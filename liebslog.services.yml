@@ -1,8 +1,12 @@
 services:
-  liebslog.get_posts:
+  liebslog.getblog:
     class: Drupal\liebslog\GetPosts
-    arguments: ['@entity_type.manager']
-services:
-  liebs_log.middleware:
-    class: Drupal\liebs_log\LiebsLogReader
-    arguments: ['@http_client', '@logger.channel.default']
+    arguments: ['@http_client', '@logger.channel.liebslog']
+
+  liebslog.getrides:
+    class: Drupal\liebslog\GetRides
+    arguments: ['@http_client', '@logger.channel.liebslog']
+
+  logger.channel.liebslog:
+    parent: logger.channel_base
+    arguments: ['liebslog']

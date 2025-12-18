@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Drupal\liebs_log;
+namespace Drupal\liebslog;
 
 use Drupal\Core\Logger\LoggerChannelInterface;
 use GuzzleHttp\ClientInterface;
@@ -10,27 +10,27 @@ use GuzzleHttp\ClientInterface;
 /**
  * @todo Add a description for the middleware.
  */
-class LiebsLogReader {
+class GetRides {
 
-  /**
-   * Constructs a LiebsLogReader object.
-   */
-  public function __construct(
-    private readonly ClientInterface $httpClient,
-    private readonly LoggerChannelInterface $loggerChannelDefault,
-  ) {}
+    /**
+    * Constructs a LiebsLogReader object.
+    */
+    public function __construct(
+        private readonly ClientInterface $httpClient,
+        private readonly LoggerChannelInterface $logger,
+    ) {}
 
    /**
     *
     */
-    public function readLog() {
+    public function rides() {
         $request = $this->httpClient->get("https://paullieberman.org/jsonapi/node/ride",
             [
-            'headers' => [
-            'Content-Type'  => 'application/json',
-            'Accept'        => 'application/json',
+                'headers' => [
+                'Content-Type'  => 'application/json',
+                'Accept'        => 'application/json',
             ],
-            'query' => "sort=-created&include=field_bike",
+                'query' => "sort=-created&include=field_bike",
             ]
         );
 

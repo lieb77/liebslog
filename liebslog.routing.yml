@@ -1,18 +1,20 @@
 liebslog.blog:
-  path: '/blog'
-  requirements:
-     _permission: 'view content'
-liebs_log.ridelog:
-  path: '/log/ridelog'
+  path: '/log/blog'
   defaults:
-    _controller: '\Drupal\liebs_log\Controller\LiebsLogController:ridelog'
+    _controller: '\Drupal\liebslog\Controller\LiebsLogController:blog'
   requirements:
     _permission: 'access content'
 
+liebslog.ridelog:
+  path: '/log/ridelog'
+  defaults:
+    _controller: '\Drupal\liebslog\Controller\LiebsLogController:ridelog'
+  requirements:
+    _permission: 'access content'
 
-liebs_log.rides:
+liebslog.rides:
   path: '/log/rides'
   defaults:
-    _controller: '\Drupal\liebs_log\Controller\LiebsLogController:rides'
+    _controller: '\Drupal\liebslog\Controller\LiebsLogController:rides'
   requirements:
     _permission: 'access content'
