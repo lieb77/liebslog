@@ -1,21 +1,9 @@
 {
-    "name": "drupal/liebslog",
-    "description": "Lieb's log",
+    "name": "lieb/liebslog",
+    "description": "Reads my ridelog using JSON:API",
     "type": "drupal-custom-module",
     "license": "GPL-2.0-or-later",
-    "autoload": {
-        "psr-4": {
-            "Drupal\\liebslog\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Paul Lieberman",
-            "email": "lieb@orchardware.net"
-        }
-    ],
-    "minimum-stability": "dev",
     "require": {
-    	"php": ">=8.1"
+        "drupal/core": "^10 || ^11"
     }
 }
